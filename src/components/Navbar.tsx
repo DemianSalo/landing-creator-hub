@@ -1,18 +1,20 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-
-const navLinks = [
-  { name: "Главная", href: "#hero" },
-  { name: "Обо мне", href: "#about" },
-  { name: "Навыки", href: "#skills" },
-  { name: "Проекты", href: "#projects" },
-  { name: "Контакты", href: "#contact" },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
+
+  const navLinks = [
+    { name: t("nav.about"), href: "#about" },
+    { name: t("nav.skills"), href: "#skills" },
+    { name: t("nav.projects"), href: "#projects" },
+    { name: t("nav.contact"), href: "#contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,7 +41,7 @@ export const Navbar = () => {
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <li key={link.name}>
+            <li key={link.href}>
               <a
                 href={link.href}
                 className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm uppercase tracking-wider"
@@ -50,13 +52,17 @@ export const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-foreground"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Language Switcher & Mobile Menu */}
+        <div className="flex items-center gap-4">
+          <LanguageSwitcher />
+          
+          <button
+            className="md:hidden text-foreground"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
@@ -68,7 +74,7 @@ export const Navbar = () => {
           >
             <ul className="flex flex-col p-6 gap-4">
               {navLinks.map((link) => (
-                <li key={link.name}>
+                <li key={link.href}>
                   <a
                     href={link.href}
                     className="text-muted-foreground hover:text-primary transition-colors block py-2"

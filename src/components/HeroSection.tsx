@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const HeroSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section
       id="hero"
@@ -25,7 +28,7 @@ export const HeroSection = () => {
             transition={{ delay: 0.4 }}
             className="text-primary font-mono text-sm md:text-base mb-4 tracking-widest"
           >
-            {'<'} WEB DEVELOPER {'/>'} 
+            {t("hero.greeting")}
           </motion.p>
 
           <motion.h1
@@ -41,11 +44,19 @@ export const HeroSection = () => {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+            transition={{ delay: 0.7 }}
+            className="text-primary font-mono text-lg md:text-xl mb-4"
+          >
+            {'<'} {t("hero.role")} {'/>'} 
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
             className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-8"
           >
-            Создаю современные веб-приложения с фокусом на производительность, 
-            эстетику и пользовательский опыт
+            {t("hero.description")}
           </motion.p>
 
           {/* Social Links */}
@@ -56,13 +67,15 @@ export const HeroSection = () => {
             className="flex items-center justify-center gap-6 mb-12"
           >
             {[
-              { icon: Github, href: "#", label: "GitHub" },
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
-              { icon: Mail, href: "#contact", label: "Email" },
+              { icon: Github, href: "https://github.com", label: "GitHub" },
+              { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+              { icon: Mail, href: "mailto:Demiansalodev@gmail.com", label: "Email" },
             ].map(({ icon: Icon, href, label }) => (
               <a
                 key={label}
                 href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
                 aria-label={label}
                 className="w-12 h-12 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary hover:glow-cyan transition-all duration-300"
               >
@@ -71,17 +84,27 @@ export const HeroSection = () => {
             ))}
           </motion.div>
 
-          {/* CTA Button */}
-          <motion.a
-            href="#projects"
+          {/* CTA Buttons */}
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full font-medium hover:glow-cyan transition-all duration-300"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            Смотреть работы
-            <ArrowDown size={18} />
-          </motion.a>
+            <a
+              href="#projects"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full font-medium hover:glow-cyan transition-all duration-300"
+            >
+              {t("hero.cta.projects")}
+              <ArrowDown size={18} />
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-border text-foreground rounded-full font-medium hover:border-primary hover:text-primary transition-all duration-300"
+            >
+              {t("hero.cta.contact")}
+            </a>
+          </motion.div>
         </motion.div>
       </div>
 
@@ -90,8 +113,9 @@ export const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
+        <span className="text-muted-foreground text-xs font-mono">{t("hero.scroll")}</span>
         <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2">
           <motion.div
             animate={{ y: [0, 8, 0] }}

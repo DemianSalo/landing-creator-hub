@@ -1,13 +1,15 @@
-import { Github, Linkedin, Twitter, Heart } from "lucide-react";
+import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Github, href: "https://github.com", label: "GitHub" },
+  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:Demiansalodev@gmail.com", label: "Email" },
 ];
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
 
   return (
     <footer className="py-12 border-t border-border">
@@ -20,8 +22,8 @@ export const Footer = () => {
 
           {/* Copyright */}
           <p className="text-muted-foreground text-sm flex items-center gap-1">
-            © {currentYear} Demain Salo. Сделано с{" "}
-            <Heart size={14} className="text-neon-pink inline" /> и React
+            © {currentYear} Demain Salo. {t("footer.built")}{" "}
+            <Heart size={14} className="text-neon-pink inline" /> & React
           </p>
 
           {/* Social Links */}
@@ -30,6 +32,8 @@ export const Footer = () => {
               <a
                 key={label}
                 href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
                 aria-label={label}
                 className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
               >
