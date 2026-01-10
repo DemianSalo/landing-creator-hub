@@ -2,18 +2,20 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Send, Mail, MapPin, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-
-const contactInfo = [
-  { icon: Mail, label: "Email", value: "hello@demainsalo.dev" },
-  { icon: MapPin, label: "Локация", value: "Remote / Worldwide" },
-  { icon: Phone, label: "Телефон", value: "+380 XX XXX XXXX" },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const ContactSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { toast } = useToast();
+  const { t } = useLanguage();
   
+  const contactInfo = [
+    { icon: Mail, label: t("contact.email"), value: "Demiansalodev@gmail.com", href: "mailto:Demiansalodev@gmail.com" },
+    { icon: MapPin, label: t("contact.location"), value: "Warsaw, Poland", href: null },
+    { icon: Phone, label: t("contact.phone"), value: "+48 534 025 462", href: "tel:+48534025462" },
+  ];
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,8 +31,8 @@ export const ContactSection = () => {
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     toast({
-      title: "Сообщение отправлено!",
-      description: "Я свяжусь с вами в ближайшее время.",
+      title: t("contact.form.success"),
+      description: t("contact.form.successDesc"),
     });
     
     setFormData({ name: "", email: "", message: "" });
@@ -49,12 +51,12 @@ export const ContactSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-primary font-mono text-sm mb-4">// Контакты</p>
+          <p className="text-primary font-mono text-sm mb-4">{t("contact.tag")}</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Давайте <span className="text-gradient">работать</span> вместе
+            {t("contact.title.1")} <span className="text-gradient">{t("contact.title.2")}</span> {t("contact.title.3")}
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Есть интересный проект? Я всегда открыт для обсуждения новых возможностей.
+            {t("contact.description")}
           </p>
         </motion.div>
 
@@ -66,17 +68,26 @@ export const ContactSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-6"
           >
-            {contactInfo.map((item, index) => (
+            {contactInfo.map((item) => (
               <div
                 key={item.label}
-                className="glass p-6 rounded-2xl flex items-center gap-4"
+                className="glass p-6 rounded-2xl flex items-center gap-4 hover:border-primary/50 transition-colors"
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                   <item.icon className="text-primary" size={24} />
                 </div>
                 <div>
                   <p className="text-muted-foreground text-sm">{item.label}</p>
-                  <p className="font-medium">{item.value}</p>
+                  {item.href ? (
+                    <a 
+                      href={item.href} 
+                      className="font-medium hover:text-primary transition-colors"
+                    >
+                      {item.value}
+                    </a>
+                  ) : (
+                    <p className="font-medium">{item.value}</p>
+                  )}
                 </div>
               </div>
             ))}
@@ -92,7 +103,7 @@ export const ContactSection = () => {
           >
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2">
-                Имя
+                {t("contact.form.name")}
               </label>
               <input
                 type="text"
@@ -101,13 +112,13 @@ export const ContactSection = () => {
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 required
                 className="w-full px-4 py-3 bg-muted border border-border rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
-                placeholder="Ваше имя"
+                placeholder={t("contact.form.namePlaceholder")}
               />
             </div>
 
             <div>
               <label htmlFor="email" className="block text-sm font-medium mb-2">
-                Email
+                {t("contact.form.email")}
               </label>
               <input
                 type="email"
@@ -122,7 +133,7 @@ export const ContactSection = () => {
 
             <div>
               <label htmlFor="message" className="block text-sm font-medium mb-2">
-                Сообщение
+                {t("contact.form.message")}
               </label>
               <textarea
                 id="message"
@@ -131,7 +142,7 @@ export const ContactSection = () => {
                 required
                 rows={4}
                 className="w-full px-4 py-3 bg-muted border border-border rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"
-                placeholder="Расскажите о вашем проекте..."
+                placeholder={t("contact.form.messagePlaceholder")}
               />
             </div>
 
@@ -141,10 +152,10 @@ export const ContactSection = () => {
               className="w-full py-4 bg-primary text-primary-foreground rounded-lg font-medium flex items-center justify-center gap-2 hover:glow-cyan transition-all duration-300 disabled:opacity-50"
             >
               {isSubmitting ? (
-                "Отправка..."
+                t("contact.form.sending")
               ) : (
                 <>
-                  Отправить <Send size={18} />
+                  {t("contact.form.submit")} <Send size={18} />
                 </>
               )}
             </button>
