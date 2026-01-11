@@ -52,6 +52,12 @@ const translations = {
     "projects.viewCode": "Код",
     "projects.soon": "Скоро буде...",
     "projects.soonDesc": "Нові проєкти вже в розробці. Слідкуйте за оновленнями!",
+    "projects.skydive.title": "Редизайн сайту Skydive Baltimore",
+    "projects.skydive.description": "Повний редизайн веб-сайту для скайдайвінг-компанії з 40 000+ відвідувачів на місяць. Оптимізація процесу бронювання для підвищення конверсії та збільшення кількості бронювань тандемних стрибків.",
+    "projects.coming1.title": "Проєкт 2",
+    "projects.coming1.description": "Скоро буде...",
+    "projects.coming2.title": "Проєкт 3",
+    "projects.coming2.description": "Скоро буде...",
     
     // Contact
     "contact.tag": "// Контакти",
@@ -119,6 +125,12 @@ const translations = {
     "projects.viewCode": "Kod",
     "projects.soon": "Wkrótce...",
     "projects.soonDesc": "Nowe projekty są w trakcie realizacji. Bądź na bieżąco!",
+    "projects.skydive.title": "Redesign strony Skydive Baltimore",
+    "projects.skydive.description": "Pełny redesign strony dla firmy skydivingowej z 40 000+ odwiedzin miesięcznie. Optymalizacja procesu rezerwacji w celu zwiększenia konwersji i liczby rezerwacji skoków tandemowych.",
+    "projects.coming1.title": "Projekt 2",
+    "projects.coming1.description": "Wkrótce...",
+    "projects.coming2.title": "Projekt 3",
+    "projects.coming2.description": "Wkrótce...",
     
     // Contact
     "contact.tag": "// Kontakt",

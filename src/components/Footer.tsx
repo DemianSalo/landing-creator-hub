@@ -1,9 +1,8 @@
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Mail, Heart, Send } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: Send, href: "https://t.me/your_telegram", label: "Telegram" },
   { icon: Mail, href: "mailto:Demiansalodev@gmail.com", label: "Email" },
 ];
 

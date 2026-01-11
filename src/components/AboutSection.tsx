@@ -10,9 +10,9 @@ export const AboutSection = () => {
   const { t } = useLanguage();
 
   const stats = [
-    { value: "3+", label: t("about.stats.experience") },
-    { value: "20+", label: t("about.stats.projects") },
-    { value: "15+", label: t("about.stats.clients") },
+    { value: "5+", label: t("about.stats.experience") },
+    { value: "60+", label: t("about.stats.projects") },
+    { value: "40+", label: t("about.stats.clients") },
   ];
 
   return (
