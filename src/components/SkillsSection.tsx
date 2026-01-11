@@ -11,10 +11,10 @@ const frontendSkills = [
 ];
 
 const backendSkills = [
+  { name: "PHP", level: 85 },
   { name: "Node.js", level: 80 },
   { name: "PostgreSQL", level: 75 },
   { name: "REST API", level: 85 },
-  { name: "GraphQL", level: 70 },
 ];
 
 const tools = [

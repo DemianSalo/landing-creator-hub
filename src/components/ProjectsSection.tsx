@@ -5,28 +5,31 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const projects = [
   {
-    title: "Project 1",
-    description: "Coming soon...",
+    titleKey: "projects.skydive.title",
+    descriptionKey: "projects.skydive.description",
+    tags: ["WordPress", "PHP", "UX/UI", "Conversion Optimization"],
+    image: null,
+    github: null,
+    live: "https://skydivinbaltimore.com",
+    date: "2024",
+  },
+  {
+    titleKey: "projects.coming1.title",
+    descriptionKey: "projects.coming1.description",
     tags: ["React", "TypeScript", "Tailwind"],
     image: null,
     github: "#",
     live: "#",
+    date: null,
   },
   {
-    title: "Project 2",
-    description: "Coming soon...",
+    titleKey: "projects.coming2.title",
+    descriptionKey: "projects.coming2.description",
     tags: ["Next.js", "Node.js", "PostgreSQL"],
     image: null,
     github: "#",
     live: "#",
-  },
-  {
-    title: "Project 3",
-    description: "Coming soon...",
-    tags: ["React", "Redux", "REST API"],
-    image: null,
-    github: "#",
-    live: "#",
+    date: null,
   },
 ];
 
@@ -59,7 +62,7 @@ export const ProjectsSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
-              key={project.title}
+              key={project.titleKey}
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
@@ -69,14 +72,19 @@ export const ProjectsSection = () => {
               <div className="aspect-video bg-muted relative flex items-center justify-center">
                 <FolderOpen className="text-muted-foreground/30" size={48} />
                 <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
+                {project.date && (
+                  <span className="absolute top-3 right-3 text-xs font-mono px-2 py-1 bg-primary/20 text-primary rounded">
+                    {project.date}
+                  </span>
+                )}
               </div>
 
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                  {project.title}
+                  {t(project.titleKey)}
                 </h3>
-                <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
-                  {project.description}
+                <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+                  {t(project.descriptionKey)}
                 </p>
 
                 {/* Tags */}
@@ -93,22 +101,28 @@ export const ProjectsSection = () => {
 
                 {/* Links */}
                 <div className="flex gap-4">
-                  <a
-                    href={project.github}
-                    className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
-                    aria-label="GitHub Repository"
-                  >
-                    <Github size={16} />
-                    {t("projects.viewCode")}
-                  </a>
-                  <a
-                    href={project.live}
-                    className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
-                    aria-label="Live Demo"
-                  >
-                    <ExternalLink size={16} />
-                    {t("projects.viewProject")}
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+                      aria-label="GitHub Repository"
+                    >
+                      <Github size={16} />
+                      {t("projects.viewCode")}
+                    </a>
+                  )}
+                  {project.live && project.live !== "#" && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+                      aria-label="Live Demo"
+                    >
+                      <ExternalLink size={16} />
+                      {t("projects.viewProject")}
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>
