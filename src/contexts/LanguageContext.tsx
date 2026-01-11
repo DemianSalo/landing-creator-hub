@@ -53,13 +53,11 @@ const translations = {
     "projects.soon": "Скоро буде...",
     "projects.soonDesc": "Нові проєкти вже в розробці. Слідкуйте за оновленнями!",
     "projects.skydive.title": "Редизайн сайту Skydive Baltimore",
-    "projects.skydive.description": "Повний редизайн веб-сайту для скайдайвінг-компанії з 40 000+ відвідувачів на місяць.",
-    "projects.skydive.fullDescription": "Повний редизайн веб-сайту для скайдайвінг-компанії Skydive Baltimore з 40 000+ відвідувачів на місяць. Старий сайт виглядав застарілим і мав низьку конверсію. Моя задача полягала в оптимізації процесу бронювання для підвищення конверсії та збільшення кількості бронювань тандемних стрибків. Результат: сучасний дизайн, покращений UX та спрощений процес бронювання.",
+    "projects.skydive.description": "Повний редизайн веб-сайту для скайдайвінг-компанії з 40 000+ відвідувачів на місяць. Оптимізація процесу бронювання для підвищення конверсії та збільшення кількості бронювань тандемних стрибків.",
     "projects.coming1.title": "Проєкт 2",
     "projects.coming1.description": "Скоро буде...",
     "projects.coming2.title": "Проєкт 3",
     "projects.coming2.description": "Скоро буде...",
-    "projects.clickToView": "Натисніть для перегляду",
     
     // Contact
     "contact.tag": "// Контакти",
@@ -128,13 +126,11 @@ const translations = {
     "projects.soon": "Wkrótce...",
     "projects.soonDesc": "Nowe projekty są w trakcie realizacji. Bądź na bieżąco!",
     "projects.skydive.title": "Redesign strony Skydive Baltimore",
-    "projects.skydive.description": "Pełny redesign strony dla firmy skydivingowej z 40 000+ odwiedzin miesięcznie.",
-    "projects.skydive.fullDescription": "Pełny redesign strony internetowej dla firmy skydivingowej Skydive Baltimore z 40 000+ odwiedzin miesięcznie. Stara strona wyglądała przestarzale i miała niską konwersję. Moim zadaniem była optymalizacja procesu rezerwacji w celu zwiększenia konwersji i liczby rezerwacji skoków tandemowych. Rezultat: nowoczesny design, ulepszone UX i uproszczony proces rezerwacji.",
+    "projects.skydive.description": "Pełny redesign strony dla firmy skydivingowej z 40 000+ odwiedzin miesięcznie. Optymalizacja procesu rezerwacji w celu zwiększenia konwersji i liczby rezerwacji skoków tandemowych.",
     "projects.coming1.title": "Projekt 2",
     "projects.coming1.description": "Wkrótce...",
     "projects.coming2.title": "Projekt 3",
     "projects.coming2.description": "Wkrótce...",
-    "projects.clickToView": "Kliknij, aby zobaczyć",
     
     // Contact
     "contact.tag": "// Kontakt",
