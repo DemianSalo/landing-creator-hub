@@ -2,15 +2,16 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink, Github, FolderOpen, Sparkles } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import skydiveBaltimoreImg from "@/assets/skydive-baltimore.webp";
 
 const projects = [
   {
     titleKey: "projects.skydive.title",
     descriptionKey: "projects.skydive.description",
     tags: ["WordPress", "PHP", "UX/UI", "Conversion Optimization"],
-    image: null,
+    image: skydiveBaltimoreImg,
     github: null,
-    live: "https://skydivinbaltimore.com",
+    live: "https://skydivebaltimore.com",
     date: "2024",
   },
   {
@@ -68,9 +69,17 @@ export const ProjectsSection = () => {
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
               className="glass rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-300"
             >
-              {/* Project Image Placeholder */}
-              <div className="aspect-video bg-muted relative flex items-center justify-center">
-                <FolderOpen className="text-muted-foreground/30" size={48} />
+              {/* Project Image */}
+              <div className="aspect-video bg-muted relative flex items-center justify-center overflow-hidden">
+                {project.image ? (
+                  <img 
+                    src={project.image} 
+                    alt={t(project.titleKey)}
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : (
+                  <FolderOpen className="text-muted-foreground/30" size={48} />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
                 {project.date && (
                   <span className="absolute top-3 right-3 text-xs font-mono px-2 py-1 bg-primary/20 text-primary rounded">
