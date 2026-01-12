@@ -2,7 +2,7 @@ import { Mail, Heart, Send } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const socialLinks = [
-  { icon: Send, href: "https://t.me/your_telegram", label: "Telegram" },
+  { icon: Send, href: "https://t.me/Demian31210", label: "Telegram" },
   { icon: Mail, href: "mailto:Demiansalodev@gmail.com", label: "Email" },
 ];
 

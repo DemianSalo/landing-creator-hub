@@ -6,6 +6,24 @@ import skydiveBaltimoreImg from "@/assets/skydive-baltimore.webp";
 
 const projects = [
   {
+    titleKey: "projects.silverclip.title",
+    descriptionKey: "projects.silverclip.description",
+    tags: ["WordPress", "UX/UI", "Booking System", "Responsive Design"],
+    image: null,
+    github: null,
+    live: "https://silverclip.co.uk/",
+    date: "2025",
+  },
+  {
+    titleKey: "projects.oksana.title",
+    descriptionKey: "projects.oksana.description",
+    tags: ["WordPress", "UX/UI", "Responsive Design"],
+    image: null,
+    github: null,
+    live: "https://oksana-samkova.de/",
+    date: "2025",
+  },
+  {
     titleKey: "projects.skydive.title",
     descriptionKey: "projects.skydive.description",
     tags: ["WordPress", "PHP", "UX/UI", "Conversion Optimization"],
@@ -13,24 +31,6 @@ const projects = [
     github: null,
     live: "https://skydivebaltimore.com",
     date: "2024",
-  },
-  {
-    titleKey: "projects.coming1.title",
-    descriptionKey: "projects.coming1.description",
-    tags: ["React", "TypeScript", "Tailwind"],
-    image: null,
-    github: "#",
-    live: "#",
-    date: null,
-  },
-  {
-    titleKey: "projects.coming2.title",
-    descriptionKey: "projects.coming2.description",
-    tags: ["Next.js", "Node.js", "PostgreSQL"],
-    image: null,
-    github: "#",
-    live: "#",
-    date: null,
   },
 ];
 
