@@ -3,13 +3,15 @@ import { useRef } from "react";
 import { ExternalLink, Github, FolderOpen, Sparkles } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import skydiveBaltimoreImg from "@/assets/skydive-baltimore.webp";
+import silverClipImg from "@/assets/silver-clip.webp";
+import oksanaSamkovaImg from "@/assets/oksana-samkova.png";
 
 const projects = [
   {
     titleKey: "projects.silverclip.title",
     descriptionKey: "projects.silverclip.description",
     tags: ["WordPress", "UX/UI", "Booking System", "Responsive Design"],
-    image: null,
+    image: silverClipImg,
     github: null,
     live: "https://silverclip.co.uk/",
     date: "2025",
@@ -18,7 +20,7 @@ const projects = [
     titleKey: "projects.oksana.title",
     descriptionKey: "projects.oksana.description",
     tags: ["WordPress", "UX/UI", "Responsive Design"],
-    image: null,
+    image: oksanaSamkovaImg,
     github: null,
     live: "https://oksana-samkova.de/",
     date: "2025",
