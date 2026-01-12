@@ -54,10 +54,10 @@ const translations = {
     "projects.soonDesc": "Нові проєкти вже в розробці. Слідкуйте за оновленнями!",
     "projects.skydive.title": "Редизайн сайту Skydive Baltimore",
     "projects.skydive.description": "Повний редизайн веб-сайту для скайдайвінг-компанії з 40 000+ відвідувачів на місяць. Оптимізація процесу бронювання для підвищення конверсії та збільшення кількості бронювань тандемних стрибків.",
-    "projects.coming1.title": "Проєкт 2",
-    "projects.coming1.description": "Скоро буде...",
-    "projects.coming2.title": "Проєкт 3",
-    "projects.coming2.description": "Скоро буде...",
+    "projects.silverclip.title": "Silver Clip - Сайт салону краси",
+    "projects.silverclip.description": "Сучасний та візуально привабливий веб-сайт для індустрії краси та салонів. Платформа для бронювання візитів та демонстрації послуг з чистим дизайном, описами послуг та зручною системою запису.",
+    "projects.oksana.title": "Oksana Samkova – Ніжний грумінг",
+    "projects.oksana.description": "Елегантний сайт для мобільного грумінг-експерта з ветеринарною освітою. Адаптивний WordPress сайт презентує послуги в теплому та професійному тоні, поєднуючи медичну експертизу з ніжним доглядом.",
     
     // Contact
     "contact.tag": "// Контакти",
@@ -127,10 +127,10 @@ const translations = {
     "projects.soonDesc": "Nowe projekty są w trakcie realizacji. Bądź na bieżąco!",
     "projects.skydive.title": "Redesign strony Skydive Baltimore",
     "projects.skydive.description": "Pełny redesign strony dla firmy skydivingowej z 40 000+ odwiedzin miesięcznie. Optymalizacja procesu rezerwacji w celu zwiększenia konwersji i liczby rezerwacji skoków tandemowych.",
-    "projects.coming1.title": "Projekt 2",
-    "projects.coming1.description": "Wkrótce...",
-    "projects.coming2.title": "Projekt 3",
-    "projects.coming2.description": "Wkrótce...",
+    "projects.silverclip.title": "Silver Clip - Strona salonu piękności",
+    "projects.silverclip.description": "Nowoczesna i wizualnie atrakcyjna strona dla branży beauty. Platforma do rezerwacji wizyt z czystym designem, opisami usług i wygodnym systemem umawiania spotkań.",
+    "projects.oksana.title": "Oksana Samkova – Delikatny grooming",
+    "projects.oksana.description": "Elegancka strona dla mobilnego eksperta groomingu z wykształceniem weterynaryjnym. Responsywna strona WordPress prezentuje usługi w ciepłym i profesjonalnym tonie.",
     
     // Contact
     "contact.tag": "// Kontakt",

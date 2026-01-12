@@ -67,7 +67,7 @@ export const HeroSection = () => {
             className="flex items-center justify-center gap-6 mb-12"
           >
             {[
-              { icon: Send, href: "https://t.me/your_telegram", label: "Telegram" },
+              { icon: Send, href: "https://t.me/Demian31210", label: "Telegram" },
               { icon: Mail, href: "mailto:Demiansalodev@gmail.com", label: "Email" },
             ].map(({ icon: Icon, href, label }) => (
               <a
