@@ -18,7 +18,7 @@ const translations = {
     
     // Hero
     "hero.greeting": "Привіт, я",
-    "hero.role": "Web Developer",
+    "hero.role": "Full-Stack Web Developer",
     "hero.description": "Створюю сучасні веб-додатки з фокусом на продуктивність, UX та чистий код. Перетворюю ідеї в елегантні цифрові рішення.",
     "hero.cta.projects": "Мої проєкти",
     "hero.cta.contact": "Зв'язатися",
@@ -29,8 +29,8 @@ const translations = {
     "about.title.1": "Розробник з",
     "about.title.2": "пристрастю",
     "about.title.3": "до коду",
-    "about.p1": "Я веб-розробник із Варшави, який спеціалізується на створенні сучасних, адаптивних та продуктивних веб-додатків.",
-    "about.p2": "Мій підхід поєднує технічну експертизу з увагою до деталей, щоб створювати рішення, які не тільки працюють бездоганно, але й виглядають приголомшливо.",
+    "about.p1": "Я Full-Stack веб-розробник з глибоким знанням повного циклу розробки різноманітних веб-додатків.",
+    "about.p2": "Моя компетенція охоплює широкий спектр мов програмування та технологій, що гарантує надійні та інноваційні рішення для ваших проєктів.",
     "about.stats.experience": "Років досвіду",
     "about.stats.projects": "Проєктів",
     "about.stats.clients": "Клієнтів",
@@ -91,7 +91,7 @@ const translations = {
     
     // Hero
     "hero.greeting": "Cześć, jestem",
-    "hero.role": "Web Developer",
+    "hero.role": "Full-Stack Web Developer",
     "hero.description": "Tworzę nowoczesne aplikacje webowe z naciskiem na wydajność, UX i czysty kod. Przekształcam pomysły w eleganckie rozwiązania cyfrowe.",
     "hero.cta.projects": "Moje projekty",
     "hero.cta.contact": "Kontakt",
@@ -102,8 +102,8 @@ const translations = {
     "about.title.1": "Programista z",
     "about.title.2": "pasją",
     "about.title.3": "do kodu",
-    "about.p1": "Jestem web developerem z Warszawy, specjalizującym się w tworzeniu nowoczesnych, responsywnych i wydajnych aplikacji webowych.",
-    "about.p2": "Moje podejście łączy ekspertyzę techniczną z dbałością o szczegóły, tworząc rozwiązania, które nie tylko działają bezbłędnie, ale też wyglądają oszałamiająco.",
+    "about.p1": "Jestem Full-Stack Web Developerem z rozległą wiedzą o całym cyklu tworzenia różnorodnych aplikacji webowych.",
+    "about.p2": "Moje kompetencje obejmują szeroki zakres języków programowania i technologii, gwarantując niezawodne i innowacyjne rozwiązania dla Twoich projektów.",
     "about.stats.experience": "Lat doświadczenia",
     "about.stats.projects": "Projektów",
     "about.stats.clients": "Klientów",
