@@ -50,7 +50,14 @@ export const HeroSection = () => {
             {'<'} {t("hero.role")} {'/>'} 
           </motion.p>
 
-          <div className="mb-8" />
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+            className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-8"
+          >
+            {t("hero.description")}
+          </motion.p>
 
           {/* Social Links */}
           <motion.div
